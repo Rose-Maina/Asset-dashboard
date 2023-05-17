@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getStorageData } from "../utils/storage";
+import { getStorageData } from "../utils/Storage";
 
 class AssetList extends Component {
   render() {

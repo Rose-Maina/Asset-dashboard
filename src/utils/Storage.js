@@ -1,4 +1,4 @@
-import { localStorage } from "window";
+
 
 const userSchema = {
   id: String,
@@ -25,9 +25,10 @@ const setStorageData = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));
 };
 
-const getStorageData = (key) => {
-  return JSON.parse(localStorage.getItem(key));
-};
+
+export function getStorageData(key) {
+  return global.localStorage.getItem(key);
+}
 
 // Set the data in the storage
 setStorageData("users", [
